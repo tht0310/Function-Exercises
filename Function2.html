@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Function 2</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			function print(arr) {
+				var str = "";
+				for (var i = 0; i < arr.length; i++) {
+					str += arr[i] + " ";
+				}
+				return str;
+			}
+
+			function del(arr, element) {
+				var i = arr.indexOf(element);
+				if (i != -1) {
+					arr.splice(i, 1);
+				}
+			}
+
+			var ds = ["Tien", "Tam", "Nhan", "Thanh", "Như"];
+			var key = "Tam";
+			console.log("Before: " + print(ds));
+			del(ds, key);
+			console.log("After: " + print(ds));
+		</script>
+	</body>
+</html>
